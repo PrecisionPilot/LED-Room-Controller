@@ -14,6 +14,9 @@ namespace LED_Room_Controller
     public partial class Form1 : Form
     {
         static SerialPort arduino;
+        string r = "255";
+        string g = "255";
+        string b = "255";
         static string port = "COM5";
         ColorDialog colorPicker = new ColorDialog();
 
@@ -24,6 +27,7 @@ namespace LED_Room_Controller
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            colorPicker.Color = Color.White;
             arduino = new SerialPort(port, 9600);
             arduino.ReadTimeout = 10;
             openArduino();
@@ -71,13 +75,17 @@ namespace LED_Room_Controller
         private void colorPickerButton_Click(object sender, EventArgs e)
         {
             colorPicker.ShowDialog();
-            string r = constantifyInt(colorPicker.Color.R);
-            string g = constantifyInt(colorPicker.Color.G);
-            string b = constantifyInt(colorPicker.Color.B);
+            r = constantifyInt(colorPicker.Color.R);
+            g = constantifyInt(colorPicker.Color.G);
+            b = constantifyInt(colorPicker.Color.B);
 
-            arduino.WriteLine("Color " + r + " " + g + " " + b);
+            updateColor();
         }
 
+        private void updateColor()
+        {
+            arduino.WriteLine("Color " + r + " " + g + " " + b);
+        }
         private string constantifyInt(int num)
         {
             if (num >= 100)
@@ -115,6 +123,25 @@ namespace LED_Room_Controller
             else
             {
                 arduino.WriteLine("   000");
+            }
+        }
+
+        private void colorSelection1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (colorSelection1.Checked)
+            {
+                colorPickerButton.Enabled = true;
+                updateColor();
+            }
+            else
+                colorPickerButton.Enabled = false;
+        }
+
+        private void colorSelection2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (colorSelection2.Checked)
+            {
+                arduino.WriteLine("Color1");
             }
         }
     }

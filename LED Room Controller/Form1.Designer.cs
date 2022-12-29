@@ -34,6 +34,8 @@
             this.colorPickerButton = new System.Windows.Forms.Button();
             this.toggleStrip = new System.Windows.Forms.CheckBox();
             this.toggleNeopixelStrip = new System.Windows.Forms.CheckBox();
+            this.colorSelection1 = new System.Windows.Forms.RadioButton();
+            this.colorSelection2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // allOnButton
@@ -58,7 +60,7 @@
             // 
             // colorPickerButton
             // 
-            this.colorPickerButton.Location = new System.Drawing.Point(12, 75);
+            this.colorPickerButton.Location = new System.Drawing.Point(12, 105);
             this.colorPickerButton.Name = "colorPickerButton";
             this.colorPickerButton.Size = new System.Drawing.Size(156, 23);
             this.colorPickerButton.TabIndex = 6;
@@ -88,11 +90,37 @@
             this.toggleNeopixelStrip.UseVisualStyleBackColor = true;
             this.toggleNeopixelStrip.CheckedChanged += new System.EventHandler(this.toggleNeopixelStrip_CheckedChanged);
             // 
+            // colorSelection1
+            // 
+            this.colorSelection1.AutoSize = true;
+            this.colorSelection1.Checked = true;
+            this.colorSelection1.Location = new System.Drawing.Point(12, 82);
+            this.colorSelection1.Name = "colorSelection1";
+            this.colorSelection1.Size = new System.Drawing.Size(88, 17);
+            this.colorSelection1.TabIndex = 9;
+            this.colorSelection1.TabStop = true;
+            this.colorSelection1.Text = "Select Colour";
+            this.colorSelection1.UseVisualStyleBackColor = true;
+            this.colorSelection1.CheckedChanged += new System.EventHandler(this.colorSelection1_CheckedChanged);
+            // 
+            // colorSelection2
+            // 
+            this.colorSelection2.AutoSize = true;
+            this.colorSelection2.Location = new System.Drawing.Point(12, 134);
+            this.colorSelection2.Name = "colorSelection2";
+            this.colorSelection2.Size = new System.Drawing.Size(118, 17);
+            this.colorSelection2.TabIndex = 10;
+            this.colorSelection2.Text = "RGB Colour Pattern";
+            this.colorSelection2.UseVisualStyleBackColor = true;
+            this.colorSelection2.CheckedChanged += new System.EventHandler(this.colorSelection2_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(182, 113);
+            this.ClientSize = new System.Drawing.Size(182, 184);
+            this.Controls.Add(this.colorSelection2);
+            this.Controls.Add(this.colorSelection1);
             this.Controls.Add(this.toggleNeopixelStrip);
             this.Controls.Add(this.toggleStrip);
             this.Controls.Add(this.colorPickerButton);
@@ -116,6 +144,8 @@
         private System.Windows.Forms.Button colorPickerButton;
         private System.Windows.Forms.CheckBox toggleStrip;
         private System.Windows.Forms.CheckBox toggleNeopixelStrip;
+        private System.Windows.Forms.RadioButton colorSelection1;
+        private System.Windows.Forms.RadioButton colorSelection2;
     }
 }
 
