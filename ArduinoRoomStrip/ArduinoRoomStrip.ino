@@ -17,10 +17,10 @@ void setup() {
   pinMode(LEDStrip, OUTPUT);
   updateStrip(255);
   updateNeopixelStrip(255, false);
-  
   strip.setBrightness(brightness);
-
   strip.begin();
+  strip.clear();
+  strip.show();
   Serial.begin(9600);
   Serial.setTimeout(50);
 }

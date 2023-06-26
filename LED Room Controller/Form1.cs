@@ -17,7 +17,7 @@ namespace LED_Room_Controller
         string r = "255";
         string g = "255";
         string b = "255";
-        static string port = "COM5";
+        static string port = "COM3";
         ColorDialog colorPicker = new ColorDialog();
 
         public Form1()
