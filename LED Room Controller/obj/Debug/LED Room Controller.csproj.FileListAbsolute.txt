@@ -1,0 +1,11 @@
+C:\_Programming\C#\LED Room Controller\LED Room Controller\bin\Debug\LED Room Controller.exe.config
+C:\_Programming\C#\LED Room Controller\LED Room Controller\bin\Debug\LED Room Controller.exe
+C:\_Programming\C#\LED Room Controller\LED Room Controller\bin\Debug\LED Room Controller.pdb
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED Room Controller.csproj.AssemblyReference.cache
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED Room Controller.csproj.SuggestedBindingRedirects.cache
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED_Room_Controller.Form1.resources
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED_Room_Controller.Properties.Resources.resources
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED Room Controller.csproj.GenerateResource.cache
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED Room Controller.csproj.CoreCompileInputs.cache
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED Room Controller.exe
+C:\_Programming\C#\LED Room Controller\LED Room Controller\obj\Debug\LED Room Controller.pdb
